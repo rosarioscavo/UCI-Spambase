@@ -1,0 +1,12 @@
+title: UCI Spambase Classification
+author: Rosario Scavo
+execute:
+  execute_notebooks: off
+
+repository:
+  url: https://github.com/rosarioscavo/UCI-Spambase
+  path_to_book: book
+  branch: main
+
+html:
+  use_repository_button: true
