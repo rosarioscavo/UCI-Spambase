@@ -1,15 +1,58 @@
-# Fundamentals of Data Analysis - Spambase
+# UCI Spambase Classification Project
 ## Author: Rosario Scavo
 
-This project was presented for the **Fundamentals of Data Analysis** course at the University of Catania for the academic year 2022/2023.
-This repository contains a detailed analysis of the **Spambase Dataset** from the UCI Machine Learning Repository. The dataset can be downloaded from [here](http://archive.ics.uci.edu/dataset/94/spambase).
+End-to-end data analysis and classical machine learning project on the **UCI Spambase** dataset, focused on **EDA, feature analysis, preprocessing, model benchmarking, and evaluation** for spam classification.
 
+**Live project page:** https://rosarioscavo.github.io/UCI-Spambase/
 
-We evaluated a variety of classification algorithms, including **Logistic Regression**, **Logistic Regression with Backward Feature Elimination (BFE)**, **Support Vector Machine (SVM)**, **SVM with Normalized Data**, **Decision Trees**, **Random Forest**, **K-Nearest Neighbors (K-NN)**, and **K-NN with Normalized Data**. The performance of these algorithms was compared based on three metrics: accuracy, macro average, and weighted average.
+## Overview
 
-![classification results](assets/classification_results.png)
+This project analyzes the **Spambase** dataset from the UCI Machine Learning Repository and compares several classification approaches for email spam detection.
 
-Our findings suggest that, overall, the classification algorithms exhibited similar performance. Notably, **Logistic Regression**, both with and without **BFE**, **Random Forest**, and **Decision Trees** demonstrated robustness in accuracy and consistency across the metrics without the need for data normalization. However, it was observed that **SVM** and **K-NN** algorithms significantly benefited from data normalization. This improvement underscores the importance of preprocessing steps in data analysis, particularly when utilizing algorithms sensitive to the scale of the data, enhancing their ability to classify the data more effectively.
+The work covers the full data science workflow:
+- exploratory data analysis
+- data integrity checks
+- descriptive statistics
+- feature-level analysis
+- outlier detection
+- multicollinearity assessment
+- model selection and benchmarking
+- hyperparameter tuning with cross-validation
+- evaluation of preprocessing effects on model performance
+
+## Dataset
+
+- **Source:** UCI Machine Learning Repository
+- **Dataset:** Spambase
+- **Task:** Binary classification (`spam` vs `not spam`)
+
+The dataset contains word-frequency, character-frequency, and capital-run-length features extracted from email messages.
+It can be downloaded from [here](http://archive.ics.uci.edu/dataset/94/spambase).
+
+## Methods
+
+I benchmarked the following models:
+- Logistic Regression
+- Logistic Regression with backward feature elimination
+- Support Vector Machine (SVM)
+- Decision Tree
+- Random Forest
+- K-Nearest Neighbors (k-NN)
+
+Model comparison included:
+- train/test evaluation
+- grid search
+- cross-validation
+- analysis of preprocessing and normalization effects
+
+## Key Findings
+
+- Most models achieved broadly comparable classification performance.
+- **Logistic Regression, Decision Tree, and Random Forest** were competitive without requiring feature normalization.
+- **SVM and k-NN** benefited noticeably from normalization, showing how preprocessing choices can materially affect performance.
+- The project highlights the importance of combining **EDA, feature analysis, and evaluation discipline** rather than relying only on model choice.
+
+![Classification results](assets/classification_results.png)
 
 ## Table of Contents
 
@@ -42,10 +85,6 @@ Our findings suggest that, overall, the classification algorithms exhibited simi
     - Grid Search and Cross Validation
     - Impact of Data Normalization
 - Conclusion
-
----
-For detailed information, please refer to the `uci_spambase.ipynb` file or for simplicity, open the `uci_spambase.html` file.
-
 
 ## Installation
 
